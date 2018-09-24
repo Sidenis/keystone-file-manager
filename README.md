@@ -61,7 +61,7 @@ Imagine, you have the following model:
 const keystone = require('keystone');
 const types = keystone.Field.Types;
 const fileManager = require('keystone-file-manager');
-const model = new keystone.List('modelName);
+const model = new keystone.List('modelName');
 
 new fileManager(model).init();
 
