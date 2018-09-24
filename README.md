@@ -5,7 +5,7 @@ Node >= v8.9.2
 Mongo >= v3.4.0
 The tool has **NOT** been tested on earlier versions.
 ##### Notice! 
-As far as you're using `keystone-file-manage`r, you should not set [KeystoneJS file Storage](https://keystonejs.com/api/field/file), cause it's set inside of `keystone-file-manager`.
+As far as you're using `keystone-file-manager`, you should not set [KeystoneJS file Storage](https://keystonejs.com/api/field/file), cause it's set inside of `keystone-file-manager`.
 
 ## Installing
  
