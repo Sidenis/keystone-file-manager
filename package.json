@@ -1,0 +1,32 @@
+{
+  "name": "keystone-file-manager",
+  "version": "0.0.0",
+  "description": "The module reveals simple API, which helps KeystoneJS developers to store files locally, without using third-party services",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "coverage": "nyc report --reporter=html jasmine"
+  },
+  "keywords": [
+    "keystonejs",
+    "javascript"
+  ],
+  "author": {
+    "name": "Sidenis"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.9.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-spies": "^1.0.0",
+    "jasmine": "^3.2.0",
+    "keystone": "^4.0.0",
+    "nyc": "^13.0.1",
+    "sinon": "^6.1.5"
+  }
+}
