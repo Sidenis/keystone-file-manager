@@ -16,12 +16,6 @@ const normalizePath = require('./normalize-path');
 module.exports = function (newImage, folderName, currentFile) {
   folderName = normalizePath(folderName);
 
-  if (!newImage || !newImage.filename) {
-    console.debug(`${__filename} There is no image field provided!`);
-
-    return false;
-  }
-
   if (currentFile) {
     const currentFileName = currentFile.filename;
 
@@ -31,14 +25,19 @@ module.exports = function (newImage, folderName, currentFile) {
       return false;
     }
 
-    if (newImage.filename !== currentFileName) {
-      const currentFilePath = keystone.expandPath(folderName + currentFileName);
+    try {
+      if (newImage.filename !== currentFileName) {
+        const currentFilePath = keystone.expandPath(folderName + currentFileName);
 
-      if (fs.existsSync(currentFilePath)) {
-        fs.unlinkSync(currentFilePath);
+        if (fs.existsSync(currentFilePath)) {
+          fs.unlinkSync(currentFilePath);
 
-        return true;
+          return true;
+        }
       }
+    } catch (err) {
+      console.error(err);
     }
+
   }
 };

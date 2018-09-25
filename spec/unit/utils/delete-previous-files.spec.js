@@ -67,16 +67,4 @@ describe('Test suite for delete-previous-files module.', () => {
 
     expect(deletePreviousFiles(newImage, folderName, currentFile)).to.be.false;
   });
-
-  it('should throw an error if there is no newImage provided', () => {
-    const newImage = undefined;
-
-    expect(deletePreviousFiles(newImage, folderName, currentFile)).to.be.false;
-  });
-
-  it('should throw an error if newImage has no non-empty filename property', () => {
-    const newImage = {filename: ''};
-
-    expect(deletePreviousFiles(newImage, folderName, currentFile)).to.be.false;
-  });
 });
