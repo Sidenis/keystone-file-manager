@@ -1,6 +1,6 @@
 {
   "name": "keystone-file-manager",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The module reveals simple API, which helps KeystoneJS developers to store files locally, without using third-party services",
   "main": "index.js",
   "scripts": {
