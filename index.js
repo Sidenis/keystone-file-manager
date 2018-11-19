@@ -53,7 +53,7 @@ module.exports = class {
 
     this.schemaObject = {};
 
-    // TODO Think about more universal solution for Window and Posix compatible paths
+    // TODO Think about more universal solution for Windows and Posix compatible paths
     this.folderName = getFolderName(this.modelName).replace(/^\//, '');
 
     // empty placeholder where later mongo document _id will be saved
